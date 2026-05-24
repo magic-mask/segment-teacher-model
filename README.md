@@ -9,11 +9,11 @@ Teacher 모델은 최종 서비스 모델이 아니며, 내부 Auto-Labeling 용
 최종 배포 및 상업적 사용은 별도의 Clean Dataset 기반 Student 모델만 대상으로 합니다.
 
 ### 패키지 설치는 해당 문서를 참조해주세요
-[Installation.md](./Installation.md)
+[Installation.md ← 설치법](./Installation.md)
 
 ---
 
-# 사용 데이터셋 관련 사항
+# ⚠️ 사용 데이터셋 관련 사항
 
 본 저장소에서는 Roboflow Universe에 공개된 ROSA Face Mask Segmentation 데이터셋을 사용합니다.
 
@@ -35,7 +35,7 @@ https://universe.roboflow.com/rosa-v4waj/rosa-face-mask-segmentation
 
 ---
 
-# Teacher 모델의 역할
+# 🎓🧑‍🏫 Teacher 모델의 역할
 
 Teacher 모델은 다음 목적에만 사용합니다.
 
@@ -47,7 +47,7 @@ Teacher 모델 출력은 최종 Ground Truth가 아닙니다.
 
 ---
 
-# Student Dataset 생성 방식
+# 🤓🙋 Student Dataset 생성 방식
 
 최종 Student Dataset은 아래 방식으로 생성합니다.
 
