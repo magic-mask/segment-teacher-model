@@ -1,0 +1,14 @@
+# Python Environment
+venv/
+.venv/
+.python-version
+
+
+# Datasets
+raw_teacher_dataset/
+
+# outputs
+checkpoints/
+output/
+runs/
+wandb/
