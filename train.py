@@ -1,13 +1,13 @@
 from rfdetr import RFDETRSegSmall
 
 if __name__ == '__main__':
-    # 1. 모델 불러오기
     model = RFDETRSegSmall() 
     
-    # 2. 학습 시작 (반드시 __main__ 블록 안쪽에 위치)
+    # 추천: VRAM 16GB 기준 가장 빠른 설정
     model.train(
-        dataset_dir="raw_teacher_dataset", # 가지고 계신 데이터셋 폴더 경로로 변경
-        epochs=10,
-        batch_size=4,        # GPU VRAM에 맞춰 조절 (예: 4)
-        grad_accum_steps=4   # batch_size * grad_accum_steps = 16 권장
+        dataset_dir="raw_teacher_dataset",
+        epochs=100,            # 100 에포크로 변경
+        batch_size=8,         # 최대한 늘림 (VRAM 에러 시 8로 감소)
+        grad_accum_steps=2,    # batch * grad_accum = 16 유지 (8로 낮추면 2로 변경)
+        num_workers=6          # 데이터 로딩 병목 현상 제거 (에러 시 4로 감소)
     )
