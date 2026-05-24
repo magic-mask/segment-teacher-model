@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     # 4. 시각화 (커스텀 클래스 지정)
     color = sv.ColorPalette.DEFAULT
-    box_annotator = sv.BoxAnnotator(color=color)
+    #box_annotator = sv.BoxAnnotator(color=color)
     label_annotator = sv.LabelAnnotator(
         color=color, 
         text_color=sv.Color.BLACK, 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     if detections.mask is not None:
         annotated_image = mask_annotator.annotate(annotated_image, detections)
         
-    annotated_image = box_annotator.annotate(annotated_image, detections)
+    #annotated_image = box_annotator.annotate(annotated_image, detections)
     annotated_image = label_annotator.annotate(annotated_image, detections, labels)
 
     # 결과 이미지 출력
