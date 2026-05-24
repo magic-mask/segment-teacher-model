@@ -1,8 +1,8 @@
-from rfdetr import RFDETRSmall
+from rfdetr import RFDETRSegSmall
 
 if __name__ == '__main__':
     # 1. 모델 불러오기
-    model = RFDETRSmall() 
+    model = RFDETRSegSmall() 
     
     # 2. 학습 시작 (반드시 __main__ 블록 안쪽에 위치)
     model.train(
